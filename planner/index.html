@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weekly Planner</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Daily Planner</h1>
+    <button onclick="openTaskModal()">+ Add Task</button>
+  </header>
+
+  <div class="calendar">
+    <div class="days" id="weekView"></div>
+  </div>
+
+  <div class="modal" id="taskModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeTaskModal()">&times;</span>
+      <h2>Add Task</h2>
+      <form id="taskForm">
+        <label>Task Name</label>
+        <input type="text" id="taskName" required />
+
+        <label>Choose Day</label>
+        <select id="taskDay">
+          <option>Monday</option>
+          <option>Tuesday</option>
+          <option>Wednesday</option>
+          <option>Thursday</option>
+          <option>Friday</option>
+          <option>Saturday</option>
+          <option>Sunday</option>
+        </select>
+
+        <label>Start Time</label>
+        <input type="time" id="startTime" required />
+
+        <label>End Time</label>
+        <input type="time" id="endTime" required />
+
+        <label>Reminder (optional)</label>
+        <input type="time" id="reminderTime" />
+
+        <button type="submit">Add Task</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
